@@ -41,7 +41,6 @@ public class Images {
                 String fullName = f.getName() + " - " + name.substring(0, name.length()-2);
                 boolean front = (name.charAt(name.length()-1) == 'F' ? true : false);
                 images.add(new Images(img, front, fullName));
-                //System.out.println();
             }
         }
     }
