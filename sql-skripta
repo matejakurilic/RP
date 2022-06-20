@@ -1,0 +1,26 @@
+CREATE TABLE postcards (
+	id SERIAL NOT NULL PRIMARY KEY,
+	name TEXT NOT NULL,
+	front BYTEA NOT NULL, 
+	back BYTEA NOT NULL, 
+	sender TEXT,
+	receiver TEXT,
+	dateSent DATE
+);
+
+
+CREATE TABLE users (
+	id SERIAL NOT NULL PRIMARY KEY,
+	username TEXT UNIQUE NOT NULL,
+	pass TEXT NOT NULL
+);
+
+
+-- Za potpunu fukncionalnost:
+
+CREATE TABLE users_postcards (
+	id SERIAL NOT NULL PRIMARY KEY,
+	id_user INTEGER REFERENCES users ON DELETE CASCADE,
+	id_postcard INTEGER REFERENCES postcards ON DELETE CASCADE,
+	UNIQUE(id_user, id_postcard)
+);
