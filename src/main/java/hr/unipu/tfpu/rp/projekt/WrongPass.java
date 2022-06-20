@@ -20,9 +20,6 @@ public class WrongPass extends JDialog {
             }
         });
 
-
-
-        // call onOK() on ESCAPE
         contentPane.registerKeyboardAction(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 onOK();
@@ -31,8 +28,6 @@ public class WrongPass extends JDialog {
     }
 
     private void onOK() {
-        // add your code here
         dispose();
     }
-
 }
