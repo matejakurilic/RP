@@ -1,8 +1,8 @@
 CREATE TABLE postcards (
 	id SERIAL NOT NULL PRIMARY KEY,
 	name TEXT NOT NULL,
-	front BYTEA NOT NULL, 
-	back BYTEA NOT NULL, 
+	image BYTEA NOT NULL, 
+	isFront NOT NULL, 
 	sender TEXT,
 	receiver TEXT,
 	dateSent DATE
